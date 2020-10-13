@@ -1,0 +1,41 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+input[type=number]{
+    appearance: textfield;
+}
+
+table{
+    width: 50%;
+    margin: auto;
+}
+
+td{
+    text-align: center;
+}
+
+th{
+    width: 33%;
+}
+#workTimeLogger{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    background-color: azure;
+    padding: 10px;
+    border-bottom: 2px solid #e4ffff;
+}
+
+#aligner{
+    max-width: 200px;
+    margin: auto;
+}
+
+#aligner > *{
+    margin-top: 2px;
+}
+
+#submitHours{
+}
