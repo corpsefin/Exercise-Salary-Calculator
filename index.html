@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <script type="module" src="js/app.js" defer></script>
+    <script defer type="module" src="./js/app.js"></script>
     <title>Palkkalaskuri</title>
 </head>
 <body>
+    <div>
+        <button>Lisää palkkatieto</button>
+        <button>Lisää tunnit</button>
+    </div>
     <form action="" id="workTimeLogger">
         <div id="aligner">
             <input type="date" id="workDate">
@@ -15,7 +19,7 @@
             <button type="submit" id="submitHours">Lähetä</button>
         </div>
     </form>
-    <div id="payDataResults">
+    <div id="salaryDataResults">
     <table id="resultTable">
         <tr>
             <th>Päivämäärä</th>

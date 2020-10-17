@@ -1,12 +1,13 @@
-import { createPay } from './createPay.js';
+import Salary from './salary.js';
+import * as WorkplaceInfo from './workplaceInfo.js';
 
-let date = document.getElementById('workDate');
+let workDate = document.getElementById('workDate');
 let workHours = document.getElementById('workHours');
 let submitHours = document.getElementById('submitHours');
-let submitPressed = false;
 
 submitHours.addEventListener('click', (event) =>{
     event.preventDefault();
-    submitPressed = true;
-    createPay(date.value, workHours.value);
+    let newSalary = new Salary(workDate.value, workHours.value, WorkplaceInfo.getWage());
+
+    newSalary.createNew();
 });
