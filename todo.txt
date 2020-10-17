@@ -1,0 +1,10 @@
+- Connecting app to MongoDB
+    - Saving input data to MongoDB
+    - Getting data from MongoDB
+- Adding a workplace
+    - Wage data
+    - Date when started working there
+- Hiding hour adding page if there's not workplace
+
+- Make into a mobile app
+- Make into a desktop app
