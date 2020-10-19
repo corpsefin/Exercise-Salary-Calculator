@@ -7,17 +7,13 @@ function Salary(date, hours, hourlyWage){
     this.hourlyWage = hourlyWage;
 }
 
-Salary.prototype.calculateSalary = function() {
+Salary.prototype.calculate = function() {
     if(this.hours < 9){
         return this.hours * this.hourlyWage;
     }
     else{
-        if(this.hours <= 10){
-            return (8*this.hourlyWage)+((this.hourlyWage*1.5)*(this.hours-8));
-        }
-        else{
-            return (8*this.hourlyWage)+((this.hourlyWage*1.5)*2)+((this.hourlyWage*2)*(this.hours-10));
-        }
+        return this.hours <= 10 ? (8 * this.hourlyWage) + ((this.hourlyWage * 1.5) * (this.hours - 8)) : 
+                                  (8 * this.hourlyWage) + ((this.hourlyWage * 1.5) * 2) + ((this.hourlyWage * 2) * (this.hours - 10));
     }
 }
 
@@ -30,7 +26,7 @@ Salary.prototype.createNew = function(){
     
     dateData.textContent = this.date;
     hoursData.textContent = this.hours;
-    payData.textContent = this.calculateSalary();
+    payData.textContent = this.calculate();
 
     dataRow.appendChild(dateData);
     dataRow.appendChild(hoursData);
